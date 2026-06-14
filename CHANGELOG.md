@@ -42,6 +42,13 @@ All notable changes to the TongTu skill are documented in this file.
 - Deleted `keyword-search language rule` section (Chinese param rule moved to global rules).
 - Removed redundant URL blocking lines from `Price Handling` and `Display Rules` (covered by global rules).
 
+### Iteration 2 — 2026-06-14 (later)
+
+- Inlined trip planning pipeline back into routing table (removed standalone section).
+- Clarified "General attraction discovery" intent: added "when no city guide exists".
+- Clarified "General discovery / vague intent": added "no city specified".
+- Complex trip planning now validates against full pipeline steps 1-4 (not just `itinerary-principles.md`).
+
 ### Verified Improvements (8 test cases)
 
 | Test Case | Before | After |
