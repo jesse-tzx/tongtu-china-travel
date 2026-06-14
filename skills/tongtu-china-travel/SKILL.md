@@ -112,15 +112,15 @@ When user intent is clear (search flights/hotels/trains/attractions), ALWAYS rou
 | Search specific attraction ("Forbidden City tickets") | `flyai search-poi --city-name "{城市}" --keyword "{景点名}"` |
 | Search by category ("museums in Beijing", "temples in Xi'an") | `flyai search-poi --city-name "{城市}" --category "{分类枚举}"` (see `references/flyai/search-poi.md` for valid categories) |
 | Search top-rated attractions ("5A scenic spots") | `flyai search-poi --city-name "{城市}" --poi-level 5` |
-| General attraction discovery ("what to do in Beijing") | `flyai search-poi --city-name "{城市}"` (no filter, returns city hotspots) |
-| Trip planning / itinerary / "how many days" / route | Follow 5-step pipeline: ① Read `references/planning/itinerary-principles.md` (2-3 attractions/day, proximity grouping, closure days, reservations) → ② Read `references/planning/seasonal-guide.md` (holiday/peak season check) → ③ Check `references/planning/city-guides/{city}.md` (if exists, use as primary; only Beijing currently) → ④ Supplement: `flyai search-poi` (attractions) + `flyai search-hotel` (hotels) + `flyai search-train`/`search-flight` (intercity legs) → ⑤ For complex constraints (budget, duration, companions): use `flyai ai-search` to draft, then cross-reference with steps ①-④ → process ai-search output per ai-search Output Processing |
+| General attraction discovery ("what to do in {city}") — when no city guide exists | `flyai search-poi --city-name "{城市}"` (no filter, returns city hotspots) |
+| Trip planning / itinerary / "how many days" / route | ① Read `itinerary-principles.md` (pacing, closure days, reservations) → ② Read `seasonal-guide.md` (holiday/peak check) → ③ Check `city-guides/{city}.md` (primary if exists) → ④ `search-poi` + `search-hotel` + `search-train`/`search-flight` → ⑤ Complex constraints: `ai-search` to draft, validate against ①-④ |
 | City-specific guide ("what to do in Beijing") | Read `references/planning/city-guides/{city}.md` as primary → `flyai search-poi --city-name "{城市}"` to supplement; if user mentions a type (e.g. "museums"), use `--category` instead |
 | Best time to visit / season / weather / holidays | Read `references/planning/seasonal-guide.md` + general knowledge |
-| General discovery / vague intent ("推荐个地方", "有什么好玩的") | `flyai ai-search` → process per ai-search Output Processing |
+| General discovery / vague intent, no city specified ("推荐个地方", "有什么好玩的") | `flyai ai-search` → process per ai-search Output Processing |
 | Attraction comparison ("A vs B", "哪个好") | `flyai ai-search` → process per ai-search Output Processing |
 | Activity/route discovery ("citywalk路线", "美食街", "夜生活") | `flyai ai-search` → process per ai-search Output Processing |
 | Food & dining ("美食", "吃什么", "餐厅推荐") | City guide knowledge base as primary; supplement with `flyai ai-search` if no city guide available |
-| Complex trip planning with constraints ("3天人均2000", "亲子游") | `flyai ai-search` → process per ai-search Output Processing; cross-reference with `itinerary-principles.md` |
+| Complex trip planning with constraints ("3天人均2000", "亲子游") | `flyai ai-search` → process per ai-search Output Processing; validate against full pipeline steps 1-4 |
 | Visa overview / "do I need a visa" / which visa type | Read `references/visa/overview.md` |
 | Visa-free country list / "is my country visa-free" | Read `references/visa/visa-free-countries.md` |
 | 144-hour transit / stopover / layover in China | Read `references/visa/visa-free-transit.md` |
