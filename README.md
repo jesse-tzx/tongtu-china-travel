@@ -31,16 +31,23 @@ TongTu is a skill for [Claude Code](https://docs.anthropic.com/en/docs/claude-co
 
 ### Step 1 — Install the Skill
 
-**OpenClaw:**
-
-```bash
-clawhub install tongtu-china-travel
-```
-
 **Claude Code:**
 
 ```bash
-cp -r /path/to/tongtu-china-travel/skills/tongtu-china-travel ~/.claude/skills/tongtu-china-travel
+git clone https://github.com/jesse-tzx/tongtu-china-travel.git
+cp -r tongtu-china-travel/skills/tongtu-china-travel ~/.claude/skills/tongtu-china-travel
+```
+
+**OpenClaw:**
+
+```bash
+npx skills add jesse-tzx/tongtu-china-travel
+```
+
+**ClawHub** (when available):
+
+```bash
+clawhub install tongtu-china-travel
 ```
 
 ### Step 2 — Install the CLI
@@ -51,7 +58,15 @@ TongTu requires the `flyai` CLI tool for real-time search:
 npm i -g @fly-ai/flyai-cli
 ```
 
-### Step 3 — Try It
+### Step 3 — Verify
+
+```bash
+flyai keyword-search --query "things to do in Beijing"
+```
+
+You should see structured JSON output. You're good to go.
+
+### Step 4 — Try It
 
 Ask in your language — TongTu detects and responds in kind:
 
@@ -128,7 +143,7 @@ City and location names are translated to Chinese internally for accurate search
 
 ## Contributing
 
-This project is maintained by the FlyAI team at Alibaba. Contributions welcome — especially:
+This project is maintained by jesse-tzx. Contributions welcome — especially:
 
 - More city guides (`references/planning/city-guides/`)
 - Language-specific improvements
