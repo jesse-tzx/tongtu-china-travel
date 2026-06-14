@@ -31,20 +31,20 @@ TongTu is a skill for [Claude Code](https://docs.anthropic.com/en/docs/claude-co
 
 ### Step 1 — Install the Skill
 
-**Claude Code:**
+**OpenClaw / Claude Code (recommended):**
+
+```bash
+npx skills add jesse-tzx/tongtu-china-travel
+```
+
+**Claude Code (manual):**
 
 ```bash
 git clone https://github.com/jesse-tzx/tongtu-china-travel.git
 cp -r tongtu-china-travel/skills/tongtu-china-travel ~/.claude/skills/tongtu-china-travel
 ```
 
-**OpenClaw:**
-
-```bash
-npx skills add jesse-tzx/tongtu-china-travel
-```
-
-**ClawHub** (when available):
+**ClawHub** (coming soon):
 
 ```bash
 clawhub install tongtu-china-travel
