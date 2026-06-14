@@ -1,0 +1,30 @@
+{
+  "name": "tongtu-china-travel",
+  "description": "TongTu — a multilingual travel guide for foreign tourists visiting China. Searches flights, hotels, trains, and attractions via FlyAI, with visa, payment, and transport guidance.",
+  "version": "0.1.0",
+  "author": {
+    "name": "alibaba-flyai",
+    "url": "https://open.fly.ai/"
+  },
+  "homepage": "https://open.fly.ai/",
+  "repository": "https://github.com/alibaba-flyai/tongtu-china-travel",
+  "license": "MIT",
+  "category": "travel",
+  "keywords": [
+    "china travel",
+    "china guide",
+    "tongtu",
+    "inbound travel",
+    "foreign tourists",
+    "multilingual",
+    "flights",
+    "hotels",
+    "trains",
+    "visa",
+    "payment",
+    "transport",
+    "attractions",
+    "alipay",
+    "fliggy"
+  ]
+}
