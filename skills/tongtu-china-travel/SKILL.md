@@ -98,7 +98,7 @@ See `references/flyai/` for detailed command parameters and response formats.
 ## Routing Logic
 
 ### CRITICAL: Structured commands first
-When user intent is clear (search flights/hotels/trains/attractions), ALWAYS route to the structured command. Do NOT pass foreign-language queries directly to `keyword-search` — it produces unreliable results for non-Chinese input. For itinerary/planning queries, check if a city guide exists in `references/planning/city-guides/` first — use it as the primary source, then supplement with `flyai search-poi` / `flyai search-hotel` for real-time data if needed.
+When user intent is clear (search flights/hotels/trains/attractions), ALWAYS route to the structured command. See Routing table below for intent→action mapping.
 
 ### Routing table
 
@@ -109,11 +109,18 @@ When user intent is clear (search flights/hotels/trains/attractions), ALWAYS rou
 | Search Marriott/international brand hotels | `flyai search-marriott-hotel` (translate dest to Chinese) |
 | Search Marriott packages/deals | `flyai search-marriott-package` (keyword in Chinese) |
 | Search trains | `flyai search-train` (translate cities to Chinese) |
-| Search attractions/tickets | `flyai search-poi` (translate city/keyword to Chinese) |
-| Trip planning / itinerary / "how many days" / route | Read `references/planning/itinerary-principles.md` + `references/planning/city-guides/{city}.md` → then `flyai search-hotel` / `flyai search-poi` to supplement real-time prices; if no city guide exists, fallback to `flyai ai-search` |
-| City-specific guide ("what to do in Beijing") | Read `references/planning/city-guides/{city}.md` as primary → `flyai search-poi` to supplement |
+| Search specific attraction ("Forbidden City tickets") | `flyai search-poi --city-name "{城市}" --keyword "{景点名}"` |
+| Search by category ("museums in Beijing", "temples in Xi'an") | `flyai search-poi --city-name "{城市}" --category "{分类枚举}"` (see `references/flyai/search-poi.md` for valid categories) |
+| Search top-rated attractions ("5A scenic spots") | `flyai search-poi --city-name "{城市}" --poi-level 5` |
+| General attraction discovery ("what to do in Beijing") | `flyai search-poi --city-name "{城市}"` (no filter, returns city hotspots) |
+| Trip planning / itinerary / "how many days" / route | Follow 5-step pipeline: ① Read `references/planning/itinerary-principles.md` (2-3 attractions/day, proximity grouping, closure days, reservations) → ② Read `references/planning/seasonal-guide.md` (holiday/peak season check) → ③ Check `references/planning/city-guides/{city}.md` (if exists, use as primary; only Beijing currently) → ④ Supplement: `flyai search-poi` (attractions) + `flyai search-hotel` (hotels) + `flyai search-train`/`search-flight` (intercity legs) → ⑤ For complex constraints (budget, duration, companions): use `flyai ai-search` to draft, then cross-reference with steps ①-④ → process ai-search output per ai-search Output Processing |
+| City-specific guide ("what to do in Beijing") | Read `references/planning/city-guides/{city}.md` as primary → `flyai search-poi --city-name "{城市}"` to supplement; if user mentions a type (e.g. "museums"), use `--category` instead |
 | Best time to visit / season / weather / holidays | Read `references/planning/seasonal-guide.md` + general knowledge |
-| General discovery (vague intent) | `flyai keyword-search` (translate query to Chinese first) |
+| General discovery / vague intent ("推荐个地方", "有什么好玩的") | `flyai ai-search` → process per ai-search Output Processing |
+| Attraction comparison ("A vs B", "哪个好") | `flyai ai-search` → process per ai-search Output Processing |
+| Activity/route discovery ("citywalk路线", "美食街", "夜生活") | `flyai ai-search` → process per ai-search Output Processing |
+| Food & dining ("美食", "吃什么", "餐厅推荐") | City guide knowledge base as primary; supplement with `flyai ai-search` if no city guide available |
+| Complex trip planning with constraints ("3天人均2000", "亲子游") | `flyai ai-search` → process per ai-search Output Processing; cross-reference with `itinerary-principles.md` |
 | Visa overview / "do I need a visa" / which visa type | Read `references/visa/overview.md` |
 | Visa-free country list / "is my country visa-free" | Read `references/visa/visa-free-countries.md` |
 | 144-hour transit / stopover / layover in China | Read `references/visa/visa-free-transit.md` |
@@ -130,11 +137,6 @@ When user intent is clear (search flights/hotels/trains/attractions), ALWAYS rou
 | Intercity transport / high-speed rail / long-distance bus | Read `references/transport/intercity.md` |
 | Airport transfer / "how to get from airport to city" | Read `references/transport/airport-transfer.md` |
 | Mixed (search + knowledge) | Combine both |
-
-### keyword-search language rule
-ALWAYS translate the `--query` parameter to Chinese before calling. Example:
-- User says "Great Wall tour" → `flyai keyword-search --query "长城一日游"`
-- User says "桂林のホテル" → `flyai keyword-search --query "桂林酒店"`
 
 ## Multilingual Rules (MANDATORY)
 
@@ -170,6 +172,22 @@ Run flyai commands via shell. Suppress stderr if supported (e.g., `2>/dev/null`)
 All commands output single-line JSON to stdout.
 
 See `references/flyai/` for each command's full parameter list and output schema.
+
+## flyai Output Rules (MANDATORY — applies to ALL flyai commands)
+
+### 1. URL 全格式拦截
+Do NOT show any flyai booking URLs to users, regardless of format:
+- JSON fields: `jumpUrl`, `detailUrl`, `bookingUrl` → discard entirely
+- Markdown hyperlinks: any `a.feizhu.com` or `fliggy.com` URL → keep the link text, remove the URL (e.g., `[豫园](https://a.feizhu.com/xxx)` → `豫园`)
+- Plain text URLs: any flyai/fliggy booking link → discard
+Never output `[Click to book]` or similar booking CTAs.
+End with the standard Booking Guidance section (Alipay AliTrip) instead.
+
+### 2. 中文调用
+All flyai command parameters (`--query`, `--city-name`, `--keyword`, `--dest-name`, `--origin`, etc.) must be in Chinese. Translate city/attraction/destination names before calling.
+
+### 3. Description 压缩
+When rendering attraction or hotel descriptions from any flyai command, summarize to 2-3 sentences max. Focus on: what it is, why it's worth visiting, practical info. Omit promotional language.
 
 ## Output Format Template
 
@@ -215,17 +233,72 @@ See `references/flyai/` for each command's full parameter list and output schema
 
 ### For Attraction Results
 
+**Description rule**: Use only the first 1–2 sentences of `description`, translated into the user's language. Do NOT paste the full text.
+
+**Free status**: If `freePoiStatus` is "FREE", highlight it (e.g. "Free entry — advance booking may still be required"). If "NOT_FREE", show `ticketInfo.price`. If "UNKNOWN" or null, write "Check on AliTrip".
+
+**Grouping**: When results span multiple categories, group by `category` with subheadings (e.g. "Museums", "Historic Sites", "Creative Districts").
+
+#### Template A — Category search (user asked for a type)
+
 ```markdown
-## {Attraction category} in {city}
+## {Category} in {city}
 
 ### {Translated Name} ({Chinese Name})
-- **Address**: {translated address}
-- **Level**: {"AAAAA National Scenic Area" / "AAAA" etc.}
-- **About**: {translated description, 2-3 sentences}
-- **Tickets**: {price if available, or "Check on AliTrip in Alipay or at venue"}
+- **Level**: {poiLevel → "5A" / "4A" / omit if null}
+- **Free?**: {freePoiStatus → "Yes" / "No — {ticketInfo.price}" / "Check on AliTrip"}
+- **About**: {first 1-2 sentences of description, translated}
 
 ![]({mainPic})
+
+> To book: Alipay → AliTrip mini-program → search "{Chinese name}"
 ```
+
+#### Template B — Specific attraction (user named it)
+
+```markdown
+## {Translated Name} ({Chinese Name})
+- **Category**: {category, translated}
+- **Level**: {poiLevel or omit}
+- **Address**: {translated address}
+- **Tickets**: {ticketInfo.price + ticketName, or "Check on AliTrip"}
+- **Free?**: {freePoiStatus}
+- **About**: {first 1-2 sentences of description, translated}
+
+![]({mainPic})
+
+> To book: Alipay → AliTrip mini-program → search "{Chinese name}"
+```
+
+#### Template C — General discovery (no filter)
+
+```markdown
+## Top Attractions in {city}
+
+| # | Attraction | Category | Level | Price |
+|---|-----------|----------|-------|-------|
+| 1 | {Name} ({Chinese}) | {category} | {poiLevel or "—"} | {price or "Free" or "—"} |
+```
+
+### For ai-search Results
+
+ai-search returns AI-generated markdown text. Process as follows:
+
+1. **Treat as reference material**, not final output — do not copy-paste or lightly translate verbatim
+2. **Strip all booking URLs**: remove any `https://a.feizhu.com/...` or `fliggy.com` links; keep the surrounding text
+3. **Extract travel information**: attractions, logistics, tips, routing, comparisons
+4. **Rewrite in your own voice** using the user's detected language
+5. **Cross-reference with knowledge base**:
+   - Add reservation requirements from `itinerary-principles.md`
+   - Add closure days (museums close Monday)
+   - Add seasonal advice from `seasonal-guide.md` if dates are mentioned
+   - Add transport tips from `references/transport/`
+6. **Apply itinerary-principles.md rules** (for trip planning queries):
+   - 2-3 attractions per day max
+   - Proximity grouping (no city-crossing zigzags)
+   - Flag advance reservation requirements
+   - Include meal slots and transit time
+7. End with standard Booking Guidance section
 
 ## Price Handling
 
@@ -234,7 +307,6 @@ See `references/flyai/` for each command's full parameter list and output schema
   - Trains: provide reference price (e.g., "Beijing-Shanghai 2nd class is typically ¥553-598")
   - Flights: "Prices vary by date. Check AliTrip in Alipay for current fares."
   - Attractions: "Check AliTrip in Alipay or purchase at the venue."
-- NEVER output raw flyai booking links (jumpUrl/detailUrl)
 
 ## Booking Guidance
 
@@ -259,7 +331,6 @@ At the end of search results, include a "How to book" section:
 - If data contains `picUrl` or `mainPic` → show image
 - Use markdown tables for multi-option comparison
 - Keep output concise — top 3-5 results unless user asks for more
-- Do NOT show jumpUrl/detailUrl to users
 - End with booking guidance
 
 ## Platform Attribution
