@@ -7,10 +7,10 @@
     Powered by <a href="https://open.fly.ai/">FlyAI</a> and <a href="https://www.fliggy.com/">Fliggy</a>.
   </p>
   <p align="center">
-    <a href="https://clawhub.ai/alibaba-flyai/tongtu-china-travel"><img src="https://img.shields.io/badge/clawhub-available-purple" alt="ClawHub"></a>
-    <a href="https://github.com/alibaba-flyai/tongtu-china-travel"><img src="https://img.shields.io/github/stars/alibaba-flyai/tongtu-china-travel?style=social" alt="GitHub Stars"></a>
+    <a href="https://clawhub.ai/jesse-tzx/tongtu-china-travel"><img src="https://img.shields.io/badge/clawhub-available-purple" alt="ClawHub"></a>
+    <a href="https://github.com/jesse-tzx/tongtu-china-travel"><img src="https://img.shields.io/github/stars/jesse-tzx/tongtu-china-travel?style=social" alt="GitHub Stars"></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License"></a>
-    <a href="https://github.com/alibaba-flyai/tongtu-china-travel"><img src="https://img.shields.io/badge/version-0.1.0-orange" alt="Version"></a>
+    <a href="https://github.com/jesse-tzx/tongtu-china-travel"><img src="https://img.shields.io/badge/version-0.1.0-orange" alt="Version"></a>
   </p>
 </p>
 
@@ -136,4 +136,4 @@ This project is maintained by the FlyAI team at Alibaba. Contributions welcome �
 
 ## License
 
-[MIT](LICENSE) — Copyright (c) 2026 alibaba-flyai
+[MIT](LICENSE) — Copyright (c) 2026 jesse-tzx

@@ -1,7 +1,7 @@
 {
   "name": "tongtu-marketplace",
   "owner": {
-    "name": "alibaba-flyai"
+    "name": "jesse-tzx"
   },
   "metadata": {
     "description": "TongTu — multilingual China travel guide for foreign tourists. Flights, hotels, trains, visa, payment, and transport info via FlyAI."
@@ -12,11 +12,11 @@
       "description": "TongTu — a multilingual travel guide for foreign tourists visiting China. Searches flights, hotels, trains, and attractions via FlyAI, with visa, payment, and transport guidance.",
       "source": {
         "source": "url",
-        "url": "https://github.com/alibaba-flyai/tongtu-china-travel.git"
+        "url": "https://github.com/jesse-tzx/tongtu-china-travel.git"
       },
       "version": "0.1.0",
       "author": {
-        "name": "alibaba-flyai"
+        "name": "jesse-tzx"
       }
     }
   ]
