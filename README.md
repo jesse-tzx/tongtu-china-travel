@@ -76,6 +76,34 @@ Ask in your language — TongTu detects and responds in kind:
 
 > "中国のビザは必要ですか？144時間トランジットを使いたいです"
 
+## Web Demo
+
+TongTu also has a runnable web demo — a chat interface powered by Claude API + FlyAI.
+
+### Prerequisites
+
+- Node.js 18+
+- `flyai` CLI installed globally (`npm i -g @fly-ai/flyai-cli`)
+- Anthropic API key ([get one here](https://console.anthropic.com/))
+
+### Run Locally
+
+```bash
+cd demo
+cp .env.local.example .env.local
+# Add your ANTHROPIC_API_KEY to .env.local
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) and start chatting.
+
+### Deploy to Vercel
+
+1. Push this repo to GitHub
+2. Import into [Vercel](https://vercel.com) — set root directory to `demo/`
+3. Add `ANTHROPIC_API_KEY` as an environment variable in Vercel
+4. Deploy
+
 ## Capabilities
 
 ### Travel Search (via FlyAI)

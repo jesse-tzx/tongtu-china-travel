@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd demo && npm run build",
+  "outputDirectory": "demo/.next",
+  "framework": "nextjs",
+  "functions": {
+    "demo/app/api/chat/route.ts": {
+      "maxDuration": 60
+    }
+  }
+}
