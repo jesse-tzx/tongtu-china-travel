@@ -109,12 +109,12 @@ When user intent is clear (search flights/hotels/trains/attractions), ALWAYS rou
 | Search Marriott/international brand hotels | `flyai search-marriott-hotel` (translate dest to Chinese) |
 | Search Marriott packages/deals | `flyai search-marriott-package` (keyword in Chinese) |
 | Search trains | `flyai search-train` (translate cities to Chinese) |
-| Search specific attraction ("Forbidden City tickets") | `flyai search-poi --city-name "{城市}" --keyword "{景点名}"` |
-| Search by category ("museums in Beijing", "temples in Xi'an") | `flyai search-poi --city-name "{城市}" --category "{分类枚举}"` (see `references/flyai/search-poi.md` for valid categories) |
-| Search top-rated attractions ("5A scenic spots") | `flyai search-poi --city-name "{城市}" --poi-level 5` |
-| General attraction discovery ("what to do in {city}") — when no city guide exists | `flyai search-poi --city-name "{城市}"` (no filter, returns city hotspots) |
+| Search specific attraction ("Forbidden City tickets") | `flyai search-poi --city-name "{city}" --keyword "{attraction}"` |
+| Search by category ("museums in Beijing", "temples in Xi'an") | `flyai search-poi --city-name "{city}" --category "{category}"` (see `references/flyai/search-poi.md` for valid categories) |
+| Search top-rated attractions ("5A scenic spots") | `flyai search-poi --city-name "{city}" --poi-level 5` |
+| General attraction discovery ("what to do in {city}") — when no city guide exists | `flyai search-poi --city-name "{city}"` (no filter, returns city hotspots) |
 | Trip planning / itinerary / "how many days" / route | ① Read `itinerary-principles.md` (pacing, closure days, reservations) → ② Read `seasonal-guide.md` (holiday/peak check) → ③ Check `city-guides/{city}.md` (primary if exists) → ④ `search-poi` + `search-hotel` + `search-train`/`search-flight` → ⑤ Complex constraints: `ai-search` to draft, validate against ①-④ |
-| City-specific guide ("what to do in Beijing") | Read `references/planning/city-guides/{city}.md` as primary → `flyai search-poi --city-name "{城市}"` to supplement; if user mentions a type (e.g. "museums"), use `--category` instead |
+| City-specific guide ("what to do in Beijing") | Read `references/planning/city-guides/{city}.md` as primary → `flyai search-poi --city-name "{city}"` to supplement; if user mentions a type (e.g. "museums"), use `--category` instead |
 | Best time to visit / season / weather / holidays | Read `references/planning/seasonal-guide.md` + general knowledge |
 | General discovery / vague intent, no city specified ("推荐个地方", "有什么好玩的") | `flyai ai-search` → process per ai-search Output Processing |
 | Attraction comparison ("A vs B", "哪个好") | `flyai ai-search` → process per ai-search Output Processing |
@@ -175,7 +175,7 @@ See `references/flyai/` for each command's full parameter list and output schema
 
 ## flyai Output Rules (MANDATORY — applies to ALL flyai commands)
 
-### 1. URL 全格式拦截
+### 1. Block All URL Formats
 Do NOT show any flyai booking URLs to users, regardless of format:
 - JSON fields: `jumpUrl`, `detailUrl`, `bookingUrl` → discard entirely
 - Markdown hyperlinks: any `a.feizhu.com` or `fliggy.com` URL → keep the link text, remove the URL (e.g., `[豫园](https://a.feizhu.com/xxx)` → `豫园`)
@@ -183,10 +183,10 @@ Do NOT show any flyai booking URLs to users, regardless of format:
 Never output `[Click to book]` or similar booking CTAs.
 End with the standard Booking Guidance section (Alipay AliTrip) instead.
 
-### 2. 中文调用
+### 2. Chinese Parameters for CLI Calls
 All flyai command parameters (`--query`, `--city-name`, `--keyword`, `--dest-name`, `--origin`, etc.) must be in Chinese. Translate city/attraction/destination names before calling.
 
-### 3. Description 压缩
+### 3. Summarize Descriptions
 When rendering attraction or hotel descriptions from any flyai command, summarize to 2-3 sentences max. Focus on: what it is, why it's worth visiting, practical info. Omit promotional language.
 
 ## Output Format Template

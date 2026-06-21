@@ -129,16 +129,31 @@ Open [http://localhost:3000](http://localhost:3000) and start chatting.
 ## How It Works
 
 ```
-You ask in your language ──→ TongTu detects language & intent
-                                       │
-                    ┌──────────────────┼──────────────────┐
-                    ▼                  ▼                  ▼
-              Travel Search      Knowledge Base      City Guides
-              (FlyAI CLI)        (references/)       (references/)
-                    │                  │                  │
-                    └──────────────────┼──────────────────┘
-                                       ▼
-                         Response in your language
+You ask in any language
+      │
+      ▼
+┌─ ① Input Processing ───────────────────┐
+│  Detect language → extract parameters   │
+│  → translate city names to Chinese       │
+└──────────────────┬─────────────────────┘
+                   ▼
+┌─ ② Intent Routing ─────────────────────┐
+│  Match 32 routing rules →               │
+│  determine execution action             │
+└──────────────────┬─────────────────────┘
+                   ▼
+┌─ ③ Execution (Dual-Track) ─────────────┐
+│  Search  → FlyAI CLI (live Fliggy data) │
+│  Knowledge → references/ (25 docs)      │
+│  Planning → both combined               │
+└──────────────────┬─────────────────────┘
+                   ▼
+┌─ ④ LLM Synthesis ──────────────────────┐
+│  Understand raw data → rewrite in your  │
+│  language → apply output constraints    │
+└──────────────────┬─────────────────────┘
+                   ▼
+        Response in your language
 ```
 
 ## Knowledge Base Structure
