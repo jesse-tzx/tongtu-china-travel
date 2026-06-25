@@ -1,6 +1,6 @@
 ---
 title: Trip Planning Principles for China Travel
-updated: 2026-06-25
+updated: 2026-06-01
 owner: becca
 applies_to: [planning, itinerary, schedule, days, route, timing, booking, reservation]
 ---
@@ -12,7 +12,7 @@ applies_to: [planning, itinerary, schedule, days, route, timing, booking, reserv
 - High-speed rail is the sweet spot for 200-1000km; fly for 1500km+
 - Most major attractions require advance online reservation (passport accepted)
 - Plan 2-3 attractions per day max; leave buffer for transit and meals
-- Museums close on Mondays (with exceptions — see Closure Days section); check each attraction before planning
+- Museums close on Mondays; check each attraction's closure day before planning
 
 ## Scale & Distance
 
@@ -25,14 +25,9 @@ China is roughly the size of the United States or all of Europe combined. Intern
 | Beijing → Shanghai | 1,300 km | High-speed rail | 4.5 hours |
 | Beijing → Xi'an | 1,100 km | High-speed rail | 4.5 hours |
 | Shanghai → Hangzhou | 180 km | High-speed rail | 1 hour |
-| Shanghai → Nanjing | 300 km | High-speed rail | 1h 10min |
-| Guangzhou → Shenzhen | 140 km | High-speed rail | 35 min |
-| Guangzhou → Hong Kong | 140 km | High-speed rail | 50 min |
 | Beijing → Chengdu | 1,800 km | Flight | 3 hours (flight) |
 | Shanghai → Guilin | 1,500 km | Flight | 2.5 hours |
-| Chengdu → Leshan | 120 km | High-speed rail | 1 hour |
-| Chengdu → Emei Mountain | 140 km | High-speed rail | 1.5 hours |
-| Xi'an → Huashan | 120 km | High-speed rail | 35 min |
+| Guangzhou → Hong Kong | 140 km | High-speed rail | 50 min |
 
 ### How many cities in N days?
 
@@ -63,7 +58,7 @@ China is roughly the size of the United States or all of Europe combined. Intern
 - More frequent (every 15-30 min on major routes)
 - Comfortable seats, phone charging, legroom
 - No weather delays (rare cancellations)
-- Passport booking available on AliTrip (Alipay) or 12306.cn
+- Passport booking available on 12306.cn or AliTrip
 
 ### When to fly
 - Beijing → Chengdu, Beijing → Kunming, Shanghai → Guilin, any route > 1500 km
@@ -87,7 +82,7 @@ China is roughly the size of the United States or all of Europe combined. Intern
 | Attraction type | Time needed | Examples |
 |----------------|-------------|---------|
 | Major museum / palace | 3-4 hours | Forbidden City, Terracotta Warriors, National Museum |
-| Large scenic area | 4-6 hours | Great Wall, West Lake full loop, Yungang Grottoes |
+| Large scenic area | 4-6 hours | Great Wall, West Lake full loop, Jiuzhaigou |
 | Temple / park / small museum | 1-2 hours | Temple of Heaven, Lingyin Temple, 798 Art |
 | Shopping street / neighborhood | 1.5-2 hours | Nanjing Road, Chengdu Jinli, Xi'an Muslim Quarter |
 | Performance / show | 2-3 hours (evening) | Peking Opera, Tang Dynasty show, acrobatics |
@@ -108,44 +103,28 @@ Many popular attractions in China now require **online reservation days in advan
 
 | Attraction | Reservation required? | How far ahead | Platform |
 |------------|----------------------|---------------|----------|
-| Forbidden City (故宫) | **Yes — mandatory** | 7 days ahead | Alipay mini-program; also WeChat mini-program "故宫博物院" / official website (English available) |
-| Great Wall — Badaling | **Yes** | 1-3 days ahead | Alipay mini-program; also WeChat mini-program |
-| Great Wall — Mutianyu | **Yes** | 1 day ahead | Alipay mini-program; also WeChat mini-program or on-site |
-| Temple of Heaven inner halls (天坛) | **Yes** | 1-3 days ahead | Alipay mini-program; also official website |
-| National Museum (国博) | **Yes — free but must book** | 1-7 days ahead | Alipay mini-program; also WeChat mini-program |
-| Shanghai Museum (上海博物馆) | **Yes — free** | Next-day tickets released at 09:00 daily | Alipay mini-program |
-| Shanghai Museum East (上海博物馆东馆) | **Yes** | 3-7 days ahead | Alipay mini-program |
-| Shanghai Tower observation deck (上海中心大厦) | Recommended | Any time online | Alipay or official website (saves 30-60 min queue) |
-| Shanghai Disneyland (上海迪士尼) | **Yes in peak season** | 2-4 weeks ahead (summer / Golden Week) | Alipay mini-program or official website |
-| Yu Garden (豫园) | Recommended | 1 day ahead (peak season sells out by mid-morning) | Alipay mini-program or official website |
-| Terracotta Warriors (兵马俑) | **Yes** | 1-3 days ahead | Alipay mini-program; also WeChat mini-program |
-| Shaanxi History Museum (陕西历史博物馆) | **Yes — free but extremely competitive** | Next-day tickets released at 09:00; set an alarm | Alipay mini-program; also WeChat mini-program or official website |
-| Panda Base (大熊猫繁育研究基地) | **Yes** | 1-5 days ahead; peak season book before arriving in China | Alipay mini-program; also WeChat mini-program |
-| Leshan Giant Buddha (乐山大佛) | Required in peak season | 1-3 days ahead | Alipay or official website |
-| Wulong Karst (武隆天坑) | Recommended | 1-2 days ahead | Alipay or official website |
-| Lingyin Temple (灵隐寺) | Recommended on weekends | 1 day ahead | Alipay mini-program |
-| Canton Tower observation deck (广州塔) | Recommended | Any time online | Alipay or official website (saves 30-60 min queue) |
-| Yungang Grottoes (云冈石窟) | **Yes in peak season** | 2-3 days ahead; peak season (May / Oct) can sell out | Alipay or official website |
-| Hanging Temple (悬空寺) | **Yes — daily quota** | 1-3 days ahead | Alipay or official website |
-| Nanjing Massacre Memorial (侵华日军南京大屠杀遇难同胞纪念馆) | **Yes — mandatory; bring passport** | 1-7 days ahead; quota fills on weekends | Official website (passport required for registration) |
+| Forbidden City (故宫) | **Yes — mandatory** | 7 days ahead | WeChat mini-program or official website |
+| Great Wall — Badaling | **Yes** | 1-3 days ahead | WeChat mini-program |
+| Great Wall — Mutianyu | **Yes** | 1 day ahead | WeChat mini-program or on-site |
+| Terracotta Warriors | **Yes** | 1-3 days ahead | WeChat mini-program |
+| National Museum (国博) | **Yes — free but must book** | 1-7 days ahead | WeChat mini-program |
 | West Lake (Hangzhou) | No (open area) | — | — |
 | The Bund (Shanghai) | No (open area) | — | — |
+| Panda Base (Chengdu) | **Yes** | 1-3 days ahead | WeChat mini-program |
 
 **Passport is accepted** for reservation at all major sites — select "护照" (passport) as ID type when booking.
 
 ### Reservation tips for foreigners
-- **Book via Alipay mini-program where available** — most major attractions now support Alipay booking; passport entry accepted
-- For sites not yet on Alipay: use the official WeChat mini-program or official website (many have English versions)
+- Most booking platforms are WeChat mini-programs — have WeChat installed and set up
+- Some sites also accept booking via Alipay mini-programs or official English websites
 - Book as early as possible during peak seasons (May 1-5, Oct 1-7, summer July-August)
-- If fully booked, check again at 08:00 AM — some sites release cancellation slots each morning
+- If fully booked, check again at 8:00 AM — some sites release cancellation slots each morning
 - Print or screenshot your QR code — some entry gates have poor signal
-- Shaanxi History Museum and National Museum free tickets are especially difficult during peak season; treat them like flight reservations
 
 ## Closure Days & Hours
 
-### Closure day rules
-
-- **Most museums close on Mondays** — virtually all public museums in China follow the standard international practice of Monday closure. This applies to: National Museum (Beijing), Forbidden City (Beijing), Shaanxi History Museum (Xi'an), Guangdong Museum (Guangzhou), Nanyue King Museum (Guangzhou), Guangzhou Museum, Three Gorges Museum (Chongqing), Datong Museum, Nanjing Museum, Nanjing Massacre Memorial, Shanghai Museum East, Power Station of Art (Shanghai), China National Tea Museum (Hangzhou), Grand Canal Museum (Hangzhou), Shenzhen Museum, and provincial/city museums generally
+### Universal rules
+- **Most museums close on Mondays** (including Forbidden City, National Museum, provincial museums)
 - **Parks and scenic areas** generally open daily (no closure day)
 - **Temples** generally open daily
 - **Last entry** is typically 30-60 minutes before closing time — don't arrive last minute
@@ -202,11 +181,10 @@ Many popular attractions in China now require **online reservation days in advan
 - Download a VPN before arrival if you need these (but turn VPN off when using Alipay/WeChat Pay)
 - WeChat is the universal communication tool — hotels, guides, and locals all use it
 - Amap (高德地图) is the best navigation app in China; Google Maps works poorly
-- Download an offline translation app (Google Translate offline Chinese pack, or Apple Translate) before departure — menus and signs frequently have no English
 
 ### Language
 - English is limited outside international hotels and major tourist zones
-- Translation apps are essential — camera translation for menus and signs is particularly useful
+- Translation apps (Google Translate with offline Chinese pack, or Apple Translate) are essential
 - Learn 3 phrases: 你好 (nǐ hǎo = hello), 谢谢 (xièxie = thanks), 这个 (zhège = this one — for pointing at menus)
 - Many restaurants have picture menus or QR code ordering (scan with WeChat)
 
@@ -217,8 +195,8 @@ When generating itineraries, follow these constraints:
 1. **Always validate against the rules above** — don't place 4 major attractions in one day
 2. **Show transit time explicitly** — "Metro Line 1, 25 min" between attractions
 3. **Flag reservation requirements** — mark any attraction that needs advance booking with a note
-4. **Check closure day** — don't schedule any museum on Monday; virtually all public museums in China close on Monday
+4. **Check closure day** — don't schedule a museum on Monday
 5. **Include a morning/afternoon/evening rhythm** — not just a flat list
 6. **Add meal slots** — tourists need to eat; suggest general areas, not specific restaurants
-7. **Provide booking guidance** — end with "How to book" linking to Alipay mini-program as primary, official website or WeChat as backup
+7. **Provide booking guidance** — end with "How to book" linking to Alipay AliTrip or specific reservation platforms
 8. **Note peak season impact** — if user's dates fall on/near a holiday, warn proactively

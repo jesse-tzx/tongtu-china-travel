@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "tongtu-china-travel": {
+      "source": "jesse-tzx/tongtu-china-travel",
+      "sourceType": "github",
+      "skillPath": "skills/tongtu-china-travel/SKILL.md",
+      "computedHash": "a088935ce19cabdab4714bb4fa617ffa2f66f2696c6615ade6a4fa383456021e"
+    }
+  }
+}

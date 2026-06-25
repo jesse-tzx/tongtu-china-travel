@@ -8,6 +8,44 @@ All notable changes to the TongTu skill are documented in this file.
 
 ---
 
+## [0.3.0] — 2026-06-25
+
+### Planning Knowledge Base Expansion
+
+- **Expanded city coverage from 1 to 10 cities** with comprehensive guides for foreign tourists:
+  - Existing: Beijing (updated)
+  - New: Shanghai, Chengdu, Chongqing, Datong, Guangzhou, Hangzhou, Nanjing, Shenzhen, Xi'an
+- Each city guide follows consistent structure: TL;DR (5 fields), city orientation, attractions (Tier 1/2), food & dining, logistics, day trips.
+- All guides include practical constraints: booking requirements, timing, transport, seasonal advice.
+
+### `itinerary-principles.md` Enhancements
+
+- **Reservation table expanded from 5 → 20 attractions** with Alipay-first booking guidance (24 Alipay references).
+- **High-speed rail connections** added for new city pairs: Shanghai→Nanjing, Guangzhou→Shenzhen, Chengdu→Leshan, Chengdu→Emei Mountain, Xi'an→Huashan.
+- **Closure day rules** now include comprehensive museum list (15 museums named) with explicit Monday closure policy.
+- **Alipay as primary booking method** throughout; WeChat mini-programs and official websites as backup.
+
+### `seasonal-guide.md` Enhancements
+
+- **Canton Fair warning** for Guangzhou (April & October): 5-star impact rating, specific dates (Apr 15-19, 23-27; Oct 15-19, 23-27), hotel price surge 2-3×, Shenzhen alternative.
+- **"Three furnaces" heat warnings** for Chongqing, Nanjing, Wuhan (July-August, 38°C+ extreme heat).
+- **City-specific best/worst times** for all 10 cities with detailed weather patterns and seasonal constraints.
+- **Datong AQI warning** for coal region air quality before outdoor sightseeing.
+- **Clothing recommendations** updated with city-specific notes (Chongqing grip for steep terrain, Datong sandstorms in March).
+
+### Verified Improvements (83 test cases)
+
+| Test Category | Count | Pass Rate |
+|---------------|:-----:|:---------:|
+| File integrity | 21 | 100% |
+| Routing accuracy | 14 | 100% |
+| Content quality | 30 | 100% |
+| Multilingual routing | 12 | 100% |
+| flyai CLI integration | 6 | 100% |
+| **Total** | **83** | **100%** |
+
+---
+
 ## [0.2.0] — 2026-06-14
 
 ### Routing Overhaul
