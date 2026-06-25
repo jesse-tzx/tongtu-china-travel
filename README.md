@@ -86,6 +86,15 @@ TongTu also has a runnable web demo — a chat interface powered by Claude API +
 - `flyai` CLI installed globally (`npm i -g @fly-ai/flyai-cli`)
 - Anthropic API key ([get one here](https://console.anthropic.com/))
 
+### Get the Demo Code
+
+```bash
+git clone https://github.com/jesse-tzx/tongtu-china-travel.git
+cd tongtu-china-travel
+```
+
+The demo is in the `demo/` subdirectory.
+
 ### Run Locally
 
 ```bash
