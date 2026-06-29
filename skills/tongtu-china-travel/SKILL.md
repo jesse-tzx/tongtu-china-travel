@@ -4,7 +4,7 @@ display_name: "TongTu — China Travel Guide for Foreign Tourists"
 description: TongTu — a multilingual travel guide for foreign tourists visiting China. Searches flights, hotels, trains, and attractions via FlyAI, with visa, payment, and transport guidance in the user's language (English, Korean, Japanese, and more). Recommends booking via Alipay AliTrip mini-program.
 homepage: https://github.com/jesse-tzx/tongtu-china-travel
 metadata:
-  version: 0.3.0
+  version: 0.3.1
   agent:
     type: tool
     runtime: node
@@ -304,7 +304,7 @@ ai-search returns AI-generated markdown text. Process as follows:
 
 - **If price is returned**: Show with approximate foreign currency equivalent (e.g., "¥598 (~$82 USD)")
 - **If price is missing**: 
-  - Trains: provide reference price (e.g., "Beijing-Shanghai 2nd class is typically ¥553-598")
+  - Trains: use `flyai search-train` to get current prices (reference: Beijing-Shanghai 2nd class is typically ¥550-660)
   - Flights: "Prices vary by date. Check AliTrip in Alipay for current fares."
   - Attractions: "Check AliTrip in Alipay or purchase at the venue."
 

@@ -1,7 +1,7 @@
 {
   "name": "tongtu-china-travel",
   "description": "TongTu — a multilingual travel guide for foreign tourists visiting China. Searches flights, hotels, trains, and attractions via FlyAI, with visa, payment, and transport guidance.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": {
     "name": "jesse-tzx",
     "url": "https://open.fly.ai/"

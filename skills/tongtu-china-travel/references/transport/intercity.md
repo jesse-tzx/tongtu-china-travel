@@ -29,16 +29,15 @@ China's HSR network is the world's largest — 45,000+ km connecting 200+ cities
 
 G-trains are the fastest and most common for long-distance. D-trains are slightly slower but often cheaper. C-trains serve short intercity routes.
 
-### Sample Routes and Times
+### Journey Times and Pricing
 
-| Route | Distance | Time | 2nd Class Price |
-|-------|----------|------|----------------|
-| Beijing → Shanghai | 1,318 km | 4.5 hours | ~CNY 553 (~$76 USD) |
-| Beijing → Xi'an | 1,216 km | 4.5 hours | ~CNY 482 (~$66 USD) |
-| Shanghai → Hangzhou | 202 km | 32 minutes | ~CNY 47 (~$6 USD) |
-| Shanghai → Nanjing | 301 km | 1 hour | ~CNY 135 (~$19 USD) |
-| Guangzhou → Shenzhen | 147 km | 30 minutes | ~CNY 75 (~$10 USD) |
-| Hong Kong → Shenzhen | 26 km | 14 minutes | ~CNY 68 (~$9 USD) |
+China's HSR network connects most major cities within 2–6 hours. Some common examples:
+- **Beijing → Shanghai** (~1,300 km): 4.5–6 hours
+- **Beijing → Xi'an** (~1,200 km): 4–5.5 hours
+- **Shanghai → Hangzhou** (~200 km): under 1 hour
+- **Guangzhou → Shenzhen** (~150 km): under 30 minutes
+
+**For current schedules, train numbers, and real-time prices**, always use the `flyai search-train` command rather than relying on reference figures — fares vary by train, date, and seat class.
 
 ### How to Buy Tickets
 
