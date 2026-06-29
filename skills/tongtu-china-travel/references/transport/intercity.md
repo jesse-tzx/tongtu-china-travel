@@ -32,10 +32,10 @@ G-trains are the fastest and most common for long-distance. D-trains are slightl
 ### Journey Times and Pricing
 
 China's HSR network connects most major cities within 2–6 hours. Some common examples:
-- **Beijing → Shanghai** (~1,300 km): 4.5–6 hours
+- **Beijing → Shanghai** (~1,318 km): 4.5–6 hours
 - **Beijing → Xi'an** (~1,200 km): 4–5.5 hours
-- **Shanghai → Hangzhou** (~200 km): under 1 hour
-- **Guangzhou → Shenzhen** (~150 km): under 30 minutes
+- **Shanghai → Hangzhou** (~180 km): under 1.5 hours
+- **Guangzhou → Shenzhen** (~110 km): 30–45 minutes
 
 **For current schedules, train numbers, and real-time prices**, always use the `flyai search-train` command rather than relying on reference figures — fares vary by train, date, and seat class.
 

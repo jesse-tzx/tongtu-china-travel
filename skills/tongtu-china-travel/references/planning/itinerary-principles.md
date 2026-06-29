@@ -22,17 +22,17 @@ China is roughly the size of the United States or all of Europe combined. Intern
 
 | Route | Distance | Best transport | Travel time |
 |-------|----------|---------------|-------------|
-| Beijing → Shanghai | 1,300 km | High-speed rail | 4.5 hours |
-| Beijing → Xi'an | 1,100 km | High-speed rail | 4.5 hours |
-| Shanghai → Hangzhou | 180 km | High-speed rail | 1 hour |
-| Shanghai → Nanjing | 300 km | High-speed rail | 1h 10min |
-| Guangzhou → Shenzhen | 140 km | High-speed rail | 35 min |
-| Guangzhou → Hong Kong | 140 km | High-speed rail | 50 min |
+| Beijing → Shanghai | 1,318 km | High-speed rail | 4.5–6 hours |
+| Beijing → Xi'an | 1,200 km | High-speed rail | 4–5.5 hours |
+| Shanghai → Hangzhou | 180 km | High-speed rail | under 1.5 hours |
+| Shanghai → Nanjing | 300 km | High-speed rail | 1–1.5 hours |
+| Guangzhou → Shenzhen | 110 km | High-speed rail | 30–45 min |
+| Guangzhou → Hong Kong | 140 km | High-speed rail | 45–60 min |
 | Beijing → Chengdu | 1,800 km | Flight | 3 hours (flight) |
 | Shanghai → Guilin | 1,500 km | Flight | 2.5 hours |
-| Chengdu → Leshan | 120 km | High-speed rail | 1 hour |
-| Chengdu → Emei Mountain | 140 km | High-speed rail | 1.5 hours |
-| Xi'an → Huashan | 120 km | High-speed rail | 35 min |
+| Chengdu → Leshan | 120 km | High-speed rail | 1–1.5 hours |
+| Chengdu → Emei Mountain | 140 km | High-speed rail | 1–1.5 hours |
+| Xi'an → Huashan | 120 km | High-speed rail | 30–45 min |
 
 ### How many cities in N days?
 
