@@ -44,7 +44,7 @@ git clone https://github.com/jesse-tzx/tongtu-china-travel.git
 cp -r tongtu-china-travel/skills/tongtu-china-travel ~/.claude/skills/tongtu-china-travel
 ```
 
-**ClawHub** (coming soon):
+**ClawHub:**
 
 ```bash
 clawhub install tongtu-china-travel
