@@ -10,7 +10,7 @@
     <a href="https://clawhub.ai/jesse-tzx/tongtu-china-travel"><img src="https://img.shields.io/badge/clawhub-available-purple" alt="ClawHub"></a>
     <a href="https://github.com/jesse-tzx/tongtu-china-travel"><img src="https://img.shields.io/github/stars/jesse-tzx/tongtu-china-travel?style=social" alt="GitHub Stars"></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License"></a>
-    <a href="https://github.com/jesse-tzx/tongtu-china-travel"><img src="https://img.shields.io/badge/version-0.3.2-orange" alt="Version"></a>
+    <a href="https://github.com/jesse-tzx/tongtu-china-travel"><img src="https://img.shields.io/badge/version-0.3.3-orange" alt="Version"></a>
   </p>
 </p>
 
