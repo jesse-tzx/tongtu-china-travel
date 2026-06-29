@@ -32,9 +32,9 @@ Chengdu is the capital of Sichuan Province and one of China's most livable citie
 - **Metro**: 13 lines. Alipay QR code at all gates. ¥2-7 per ride. Well-organized and covers most tourist sites.
 - **To Panda Base**: Metro Line 3 to 熊猫大道站, then free shuttle bus or 15-min taxi ride. Total ~35min from city center.
 - **Didi**: Works seamlessly throughout the city.
-- **To Leshan**: 高铁 from 成都东站 to 乐山站 (~1h, ¥40-60), then tourist bus to the Giant Buddha.
-- **To Emei**: 高铁 from 成都东站 to 峨眉山站 (~1.5h, ¥50-70), then bus to the mountain base.
-- **To Qingcheng Mountain**: Metro Line 17 to 青城山站 (~1h, ¥12) — the most convenient mountain day trip.
+- **To Leshan**: 高铁 from 成都东站 to 乐山站 (~1h), then tourist bus to the Giant Buddha. Use `flyai search-train` for current schedules and prices.
+- **To Emei**: 高铁 from 成都东站 to 峨眉山站 (~1-1.5h), then bus to the mountain base. Use `flyai search-train` for current schedules and prices.
+- **To Qingcheng Mountain**: Metro Line 17 to 青城山站 (~1h) — the most convenient mountain day trip. Use `flyai search-train` for current schedules and prices.
 
 ## Attractions — Details & Logistics
 

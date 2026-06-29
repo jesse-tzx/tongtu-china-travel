@@ -32,7 +32,7 @@ Nanjing was China's capital during the Ming dynasty and the Republic of China er
 - **Metro**: 10 lines. Alipay QR code. ¥2-7 per ride. Lines 1 and 2 are the main tourist lines.
 - **Purple Mountain scenic bus**: A free or low-cost shuttle runs between the main Purple Mountain sites (Mausoleum, Ming Tomb, Linggu Temple). Buy a day pass at the scenic area entrance (~¥30).
 - **Didi**: Essential for Purple Mountain if not using the scenic bus. City-wide fares are reasonable.
-- **To Shanghai**: 高铁 from 南京南站 to 上海虹桥 (~1h 10min, ¥120-180) or 上海站 (~1.5h). One of China's most convenient city pairs.
+- **To Shanghai**: 高铁 from 南京南站 to 上海虹桥 (~1h-1.5h) or 上海站. One of China's most convenient city pairs. Use `flyai search-train` for current schedules and prices.
 - **To Yangzhou**: Bus from 南京汽车东站 (~1.5h); an easy day trip.
 
 ## Attractions — Details & Logistics

@@ -33,7 +33,7 @@ Shenzhen is China's youngest major city (established 1980) and the world's faste
 - **Metro**: 16 lines covering the entire city. Alipay QR code at all gates. ¥2-9 per ride. Shenzhen's metro is fast and reliable.
 - **Didi**: Works seamlessly; Shenzhen drivers typically have better English than in most Chinese cities.
 - **Walking**: OCT Loft and Sea World are walkable between each other (~20min). Other zones require metro.
-- **To Hong Kong**: 高铁 from 福田站 to Hong Kong West Kowloon — 30min, ~¥85. Or metro Line 1 to 罗湖 border crossing (slower, more pedestrian traffic).
+- **To Hong Kong**: 高铁 from 福田站 to Hong Kong West Kowloon — ~20min. Use `flyai search-train` for current schedules and prices. Or metro Line 1 to 罗湖 border crossing (slower, more pedestrian traffic).
 
 ## Attractions — Details & Logistics
 
