@@ -4,7 +4,7 @@ display_name: "TongTu — China Travel Guide for Foreign Tourists"
 description: TongTu — a multilingual travel guide for foreign tourists visiting China. Searches flights, hotels, trains, and attractions via FlyAI, with visa, payment, and transport guidance in the user's language (English, Korean, Japanese, and more). Recommends booking via Alipay AliTrip mini-program.
 homepage: https://github.com/jesse-tzx/tongtu-china-travel
 metadata:
-  version: 0.3.1
+  version: 0.3.2
   agent:
     type: tool
     runtime: node
