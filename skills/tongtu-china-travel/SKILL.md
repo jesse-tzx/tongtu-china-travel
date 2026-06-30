@@ -4,7 +4,7 @@ display_name: "TongTu — China Travel Guide for Foreign Tourists"
 description: Plan trips to China with flight, hotel, train, and attraction search. Use when traveling to China — covers visa, payment (Alipay/WeChat Pay), transport, eSIM, and city guides in English, Korean, Japanese, and more.
 homepage: https://github.com/jesse-tzx/tongtu-china-travel
 metadata:
-  version: 0.3.5
+  version: 0.3.7
   agent:
     type: tool
     runtime: node
