@@ -8,6 +8,54 @@ All notable changes to the TongTu skill are documented in this file.
 
 ---
 
+## [0.3.5] — 2026-07-01
+
+### Visa Policy Knowledge Base Update (240-hour Transit)
+
+Major update to visa reference files based on China's latest transit visa-free policy, verified against the National Immigration Administration (NIA) official sources.
+
+#### Transit Visa-Free Policy Upgrade
+
+- **144-hour → 240-hour transit**: Extended from 6 days to **10 days** for 55 eligible countries
+- **Cross-provincial travel allowed**: New 24-province coverage model — 18 full-province scope, 6 city-restricted provinces
+- **Port expansion**: From 30+ ports to **65 ports across 24 provinces**
+- **24-hour transit added**: All nationalities, all open ports, stay in port area
+- **Area restrictions clarified**: 7 provinces NOT covered (Inner Mongolia, Jilin, Tibet, Gansu, Qinghai, Ningxia, Xinjiang)
+
+#### Unilateral Visa-Free List Update
+
+- **50 countries** confirmed per NIA official (as of 2026-02-17)
+- **South Korea, Japan, Brunei**: Corrected from 15 days to **30 days** (NIA standard: all 50 countries = 30 days)
+- **New additions**: Iceland, Cyprus, Malta, Estonia, Latvia, Romania, Bulgaria, North Macedonia, Montenegro, Russia, Liechtenstein, Monaco, Andorra, Bahrain, Kuwait, Oman, Saudi Arabia, Argentina, Brazil, Chile, Peru, Uruguay
+- **Regional policies documented**: Hainan 30-day (59 countries), Pearl River Delta 144h, Guilin ASEAN 144h, Xishuangbanna ASEAN 6-day, Cruise ship 15-day
+
+#### Corrected Data Points
+
+- 240h transit eligible countries (Asia): Georgia → **Indonesia** (per NIA official)
+- Brunei reclassified: now in both unilateral 30-day and mutual lists
+- Removed "15-day visa-free" section (no longer exists per NIA)
+
+#### SKILL.md Updates
+
+- Routing keywords: `144.?hour|72.?hour` → `240.?hour|24.?hour`
+- Routing table: "144-hour transit" → "240-hour transit"
+
+#### Verification
+
+All visa policy content verified against:
+- NIA Transit Visa Exemption Policy page (nia.gov.cn/n741440/n741577/c1731205)
+- NIA Unilateral Visa-Free Country List (nia.gov.cn/n741440/n741577/c1731154)
+- Ministry of Foreign Affairs announcements
+
+#### Files Changed
+
+- `references/visa/overview.md` — full overhaul with cross-provincial travel, regional policies
+- `references/visa/visa-free-transit.md` — 240h policy, 24h transit, expanded area coverage
+- `references/visa/visa-free-countries.md` — 50-country list, 30-day standard, regional policies
+- `SKILL.md` — keyword routing updates
+
+---
+
 ## [0.3.0] — 2026-06-25
 
 ### Planning Knowledge Base Expansion
